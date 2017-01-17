@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from news import views as  news_views
+from xinwen import views as  xinwen_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,7 +25,7 @@ urlpatterns = [
     url(r'^change/', news_views.changepass),
     url(r'^nini/', news_views.CheckCod),
     url(r'^activate/(?P<token>\w+.[-_\w]*\w+.[-_\w]*\w+)/$',news_views.active_user,name='active_user'),
-    url(r'^$','xinwen.views.index',name='index'),
-    url(r'^co/(?P<colum>[^/]+)/$', 'xinwen.views.col', name='colu'),
-    url(r'^ne/(?P<pk>\d+)/(?P<articl>[^/]+)/$', 'xinwen.views.art', name='arti'),
+    url(r'^$',xinwen_views.index,name='index'),
+    url(r'^co/(?P<colum>[^/]+)/$', xinwen_views.col, name='colu'),
+    url(r'^ne/(?P<pk>\d+)/(?P<articl>[^/]+)/$', xinwen_views.art, name='arti'),
 ]
