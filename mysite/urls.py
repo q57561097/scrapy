@@ -23,5 +23,8 @@ urlpatterns = [
     url(r'^accounts/login/', news_views.login),
     url(r'^change/', news_views.changepass),
     url(r'^nini/', news_views.CheckCod),
-    url(r'^activate/(?P<token>\w+.[-_\w]*\w+.[-_\w]*\w+)/$',news_views.active_user,name='active_user')
+    url(r'^activate/(?P<token>\w+.[-_\w]*\w+.[-_\w]*\w+)/$',news_views.active_user,name='active_user'),
+    url(r'^$','xinwen.views.index',name='index'),
+    url(r'^co/(?P<colum>[^/]+)/$', 'xinwen.views.col', name='colu'),
+    url(r'^ne/(?P<pk>\d+)/(?P<articl>[^/]+)/$', 'xinwen.views.art', name='arti'),
 ]
