@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+ 
+{% block title %} 招聘信息 {% endblock title %}
+ 
+ 
+{% block content %}
+<ul>
+    {% for zwlb in  zwlbs %}
+        <li>
+            <a href="{{ zwlb.get_absolute_url }}"> {{ zwlb.zwmc}} {{ zwlb.zwyx}}  {{ zwlb.gzdd}}   {{ zwlb.gsmz}}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

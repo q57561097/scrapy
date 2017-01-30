@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ 
+{% block title %} 首页 {% endblock title %}
+ 
+ 
+{% block content %}
+<li>职位名称：{{ zwxxi.zwmc }}</li>
+<li>职位月薪：{{ zwxxi.zwyx }}</li>
+<li>工作地点：{{ zwxxi.gzdd }}</li>
+<li>公司名称：{{ zwxxi.gsmz}}</li>
+
+<p>职位要求：{{zwxxi.zwjj}}</p>
+<p>公司简介：{{gsxx.gsjj}}</p>
+<h5>该公司其他职位</h5>
+<ul>
+    {% for qtzw in  gsxx.zwxx_set.all  %}
+        <li>
+            <a href="{{ qtzw.get_absolute_url }}"> {{ qtzw.zwmc}} </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

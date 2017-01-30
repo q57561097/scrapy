@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from news import views as  news_views
 from xinwen import views as  xinwen_views
+from zlzp import views as zlzp_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,4 +29,7 @@ urlpatterns = [
     url(r'^$',xinwen_views.index,name='index'),
     url(r'^co/(?P<colum>[^/]+)/$', xinwen_views.col, name='colu'),
     url(r'^ne/(?P<pk>\d+)/(?P<articl>[^/]+)/$', xinwen_views.art, name='arti'),
+    url(r'^zwxx/(?P<pk>\d+)/$', zlzp_views.Zwyq, name='zwxx'),
+    url(r'^zpxx/',zlzp_views.Zpxx)
+
 ]

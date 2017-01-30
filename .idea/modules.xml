@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../djpc/.idea/djpc.iml" filepath="$PROJECT_DIR$/../djpc/.idea/djpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mysite.iml" filepath="$PROJECT_DIR$/.idea/mysite.iml" />
       <module fileurl="file://$PROJECT_DIR$/../nini/.idea/nini.iml" filepath="$PROJECT_DIR$/../nini/.idea/nini.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pc/pc/.idea/pc.iml" filepath="$PROJECT_DIR$/../pc/pc/.idea/pc.iml" />
     </modules>
   </component>
 </project>

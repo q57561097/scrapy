@@ -16,6 +16,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="nini" />
+    <orderEntry type="module" module-name="pc" />
+    <orderEntry type="module" module-name="djpc" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
